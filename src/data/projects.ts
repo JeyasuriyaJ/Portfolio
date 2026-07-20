@@ -14,6 +14,7 @@ export interface Project {
   lessonsLearned: string[];
   githubUrl: string;
   liveDemoUrl?: string;
+  imageUrl: string;
 }
 
 export const projects: Project[] = [
@@ -23,6 +24,7 @@ export const projects: Project[] = [
     subtitle: 'Graph-based Decision Support & Link Analysis System',
     year: '2026',
     isFeatured: true,
+    imageUrl: '/assets/crime-intelligence.png',
     shortDescription: 'Architected a law enforcement decision-support system modeling suspects and cases as graph nodes to perform multi-hop (2-3 degree) link analysis and reveal hidden connections.',
     problemStatement: 'Law enforcement agencies face challenges in identifying hidden relationships and multi-degree operational networks across disparate criminal records. Traditional relational databases struggle with fast, complex multi-hop queries required to connect suspects across multiple cases.',
     solution: 'Engineered a full-stack intelligence platform powered by FastAPI, Neo4j, and PostgreSQL. Suspects, incidents, locations, and evidence are modeled as graph nodes, enabling multi-hop graph queries that uncover hidden connections invisible to single-degree searches.',
@@ -54,6 +56,7 @@ export const projects: Project[] = [
     subtitle: 'Real-time Computer Vision & Compliance Monitoring',
     year: '2026',
     isFeatured: false,
+    imageUrl: '/assets/helmet-detection.png',
     shortDescription: 'Built a real-time computer vision system using a fine-tuned YOLOv8 model and Django to continuously monitor live video streams and flag safety helmet violations.',
     problemStatement: 'Manual safety compliance monitoring at industrial construction and manufacturing sites is inefficient, error-prone, and impossible to scale across multiple locations simultaneously.',
     solution: 'Developed an automated computer vision pipeline using YOLOv8, PyTorch, and OpenCV. Video streams are analyzed in real time to detect non-compliant workers, log timestamped violation records, and alert safety managers immediately through a secure Django portal.',
@@ -85,6 +88,7 @@ export const projects: Project[] = [
     subtitle: 'Machine Learning Delay Analytics & Corridor Intelligence',
     year: '2026',
     isFeatured: false,
+    imageUrl: '/assets/flight-delay.png',
     shortDescription: 'Developed a predictive flight intelligence system combining LightGBM delay risk estimation with live weather (Open-Meteo) and flight-tracking (OpenSky Network) APIs.',
     problemStatement: 'Flight delays disrupt travel schedules and logistics. Passengers and operators lack predictive insights that combine historical corridor performance with real-time weather conditions.',
     solution: 'Built a machine learning platform utilizing LightGBM to calculate delay risk scores across major flight corridors by fusing historical flight logs with real-time meteorological data and live flight coordinates.',
