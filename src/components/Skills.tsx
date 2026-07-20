@@ -82,13 +82,13 @@ export const Skills: React.FC = () => {
                 <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4 pb-2 border-b border-slate-800 group-hover:text-cyan-400 transition-colors">
                   {group.category} ({group.skills.length})
                 </h3>
-                <div className="flex flex-wrap gap-2.5">
+                <div className="flex flex-wrap gap-3">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-200 hover:border-cyan-500/50 hover:text-cyan-300 hover:scale-102 transition-all shadow-xs cursor-default"
+                      className="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl bg-slate-950 border border-slate-800 text-sm font-semibold text-slate-100 hover:border-cyan-500/60 hover:text-cyan-300 hover:scale-103 transition-all shadow-xs cursor-default"
                     >
-                      <TechLogo name={skill} className="w-4 h-4 flex-shrink-0" />
+                      <TechLogo name={skill} className="w-6 h-6 flex-shrink-0" />
                       <span>{skill}</span>
                     </span>
                   ))}

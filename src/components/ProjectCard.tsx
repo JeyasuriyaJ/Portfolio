@@ -87,13 +87,13 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = fa
           </div>
 
           {/* Tech Stack Chips with Logos */}
-          <div className="flex flex-wrap gap-1.5 mb-2">
+          <div className="flex flex-wrap gap-2 mb-2">
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-300 text-xs font-medium group-hover:border-slate-700 transition-colors"
+                className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-950 border border-slate-800 text-slate-200 text-xs font-semibold group-hover:border-slate-700 transition-colors"
               >
-                <TechLogo name={tech} className="w-3.5 h-3.5 flex-shrink-0" />
+                <TechLogo name={tech} className="w-4.5 h-4.5 flex-shrink-0" />
                 <span>{tech}</span>
               </span>
             ))}
