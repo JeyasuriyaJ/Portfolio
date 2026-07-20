@@ -5,7 +5,7 @@ interface TechLogoProps {
   className?: string;
 }
 
-export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" }) => {
+export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-6 h-6" }) => {
   const norm = name.toLowerCase().replace(/[^a-z0-9]/g, '');
 
   switch (norm) {
@@ -29,17 +29,14 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
         <svg className={className} viewBox="0 0 128 128">
           <path fill="#3776AB" d="M63.3 13.5c-16 0-15 7-15 7l.1 7.2h15.3v2.2H22.3s-10.1-.8-10.1 14.8c0 15.6 8.8 15 8.8 15h5.3v-7.5c0-8.6 7.4-8.6 7.4-8.6h15.2c7.6 0 7.4-7 7.4-7V13.5z" />
           <path fill="#FFD43B" d="M64.7 114.5c16 0 15-7 15-7l-.1-7.2H64.3v-2.2h41.4s10.1.8 10.1-14.8c0-15.6-8.8-15-8.8-15h-5.3v7.5c0 8.6-7.4 8.6-7.4 8.6H59.1c-7.6 0-7.4 7-7.4 7v23.1z" />
-          <circle fill="#FFFFFF" cx="44.2" cy="22.5" r="2.5" />
-          <circle fill="#FFFFFF" cx="83.8" cy="105.5" r="2.5" />
+          <circle fill="#FFFFFF" cx="44.2" cy="22.5" r="3" />
+          <circle fill="#FFFFFF" cx="83.8" cy="105.5" r="3" />
         </svg>
       );
     case 'sql':
-    case 'sqlite':
       return (
-        <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <ellipse cx="12" cy="5" rx="9" ry="3" className="stroke-blue-600" />
-          <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" className="stroke-blue-600" />
-          <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" className="stroke-blue-600" />
+        <svg className={className} viewBox="0 0 128 128">
+          <path fill="#00758F" d="M64 12C33.1 12 8 20.1 8 30v68c0 9.9 25.1 18 56 18s56-8.1 56-18V30c0-9.9-25.1-18-56-18zm0 12c24.8 0 44 5.4 44 6s-19.2 6-44 6-44-5.4-44-6 19.2-6 44-6zm0 28c24.8 0 44 5.4 44 6s-19.2 6-44 6-44-5.4-44-6 19.2-6 44-6zm0 28c24.8 0 44 5.4 44 6s-19.2 6-44 6-44-5.4-44-6 19.2-6 44-6z" />
         </svg>
       );
     case 'html':
@@ -66,18 +63,18 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
     case 'js':
       return (
         <svg className={className} viewBox="0 0 128 128">
-          <path fill="#F7DF1E" d="M0 0h128v128H0z" />
+          <rect fill="#F7DF1E" width="128" height="128" rx="20" />
           <path fill="#000000" d="M67.3 104.9c3.2 5.2 7.7 8.7 15.6 8.7 6.6 0 10.8-3.3 10.8-8.1 0-5.6-4.5-7.7-12-10.9l-4.1-1.8c-12.1-5.1-20.1-11.5-20.1-25.1 0-14 10.8-24.3 27.6-24.3 12 0 19.9 4.3 25.1 13.5l-10.7 6.9c-2.8-4.8-6.1-6.9-13.8-6.9-6 0-9.6 2.7-9.6 6.8 0 4.8 3.5 6.7 10.6 9.8l4.1 1.8c14.2 6.1 21.9 12.2 21.9 25.9 0 15.8-12.3 25.3-30.8 25.3-17 0-26.6-8.3-31.9-18.4l11.3-6.8zM24.7 103.5c2.6 4.3 5.9 7.7 11.6 7.7 5.9 0 9.7-2.3 9.7-11.4V44.7h13.9v55.5c0 16.2-9.4 23.4-23.7 23.4-12.8 0-20.4-6.4-23.9-14l12.4-6.1z" />
         </svg>
       );
     case 'react':
       return (
         <svg className={className} viewBox="0 0 128 128">
-          <path fill="#61DAFB" d="M64 45.4c10.3 0 18.6 8.3 18.6 18.6S74.3 82.6 64 82.6s-18.6-8.3-18.6-18.6S53.7 45.4 64 45.4z" />
-          <g fill="none" stroke="#61DAFB" strokeWidth="6">
-            <ellipse cx="64" cy="64" rx="54" ry="21" />
-            <ellipse cx="64" cy="64" rx="54" ry="21" transform="rotate(60 64 64)" />
-            <ellipse cx="64" cy="64" rx="54" ry="21" transform="rotate(120 64 64)" />
+          <circle fill="#61DAFB" cx="64" cy="64" r="14" />
+          <g fill="none" stroke="#61DAFB" strokeWidth="7">
+            <ellipse cx="64" cy="64" rx="52" ry="20" />
+            <ellipse cx="64" cy="64" rx="52" ry="20" transform="rotate(60 64 64)" />
+            <ellipse cx="64" cy="64" rx="52" ry="20" transform="rotate(120 64 64)" />
           </g>
         </svg>
       );
@@ -90,7 +87,7 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
     case 'django':
       return (
         <svg className={className} viewBox="0 0 128 128">
-          <path fill="#0C4B33" d="M128 0v128H0V0h128z" />
+          <rect fill="#0C4B33" width="128" height="128" rx="20" />
           <path fill="#FFFFFF" d="M48.7 94c-4.4 0-8.2-1.2-11.4-3.6-3.2-2.4-4.8-6.1-4.8-11.1V34h12.5v43.2c0 2.8.7 4.8 2.1 6.1 1.4 1.3 3.4 1.9 6 1.9 2.5 0 4.6-.7 6.3-2.1V94h-10.7zm30.6 0V69.7c-2.3 2.1-4.8 3.1-7.6 3.1-3.6 0-6.5-1.3-8.8-3.9-2.3-2.6-3.4-6.2-3.4-10.9 0-4.6 1.1-8.2 3.4-10.8 2.3-2.6 5.2-3.9 8.8-3.9 2.8 0 5.3 1 7.6 3.1V34h12.5v60H79.3zm-7.6-31.5c2 0 3.7-.7 5.1-2.1V52.4c-1.4-1.4-3.1-2.1-5.1-2.1-1.7 0-3.1.6-4.2 1.9-1.1 1.3-1.6 3.1-1.6 5.5 0 2.4.5 4.2 1.6 5.5 1.1 1.3 2.5 2 4.2 2z" />
         </svg>
       );
@@ -106,7 +103,7 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
       return (
         <svg className={className} viewBox="0 0 128 128">
           <path fill="#EE4C2C" d="M79.5 22.8L66.7 35.6c1.1 1.1 2.3 2.5 3.3 4 8.7 12.6 7.4 30.1-3.2 41.1-11.4 11.9-30 12.8-42.5 2.2-12.5-10.6-14.3-29.1-4.2-41.9C29.6 29 46.8 25.1 61.2 31.6l10.9-10.9C53.7 10.7 31.1 14.8 17 29.8 1.9 45.9 2.5 70.8 18.4 86.2s40.8 15.4 56.7.1c15.1-14.6 18.1-37.8 7.3-55.7-1-1.7-2.1-3.4-2.9-4.8z" />
-          <circle fill="#EE4C2C" cx="81.2" cy="20.5" r="5.5" />
+          <circle fill="#EE4C2C" cx="81.2" cy="20.5" r="6" />
         </svg>
       );
     case 'opencv':
@@ -114,7 +111,63 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
         <svg className={className} viewBox="0 0 128 128">
           <circle fill="#FF0000" cx="64" cy="32" r="22" />
           <circle fill="#00FF00" cx="36" cy="84" r="22" />
-          <circle fill="#0000FF" cx="92" cy="84" r="22" />
+          <circle fill="#0080FF" cx="92" cy="84" r="22" />
+        </svg>
+      );
+    case 'yolov8':
+    case 'yolo':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#00D2FF" width="128" height="128" rx="24" />
+          <circle fill="#0A0F1D" cx="64" cy="64" r="40" />
+          <circle fill="#00D2FF" cx="64" cy="64" r="22" />
+          <circle fill="#0A0F1D" cx="64" cy="64" r="10" />
+        </svg>
+      );
+    case 'langgraph':
+    case 'langchain':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#1C2C4C" width="128" height="128" rx="24" />
+          <circle fill="#38BDF8" cx="40" cy="40" r="16" />
+          <circle fill="#38BDF8" cx="88" cy="40" r="16" />
+          <circle fill="#818CF8" cx="64" cy="88" r="18" />
+          <path stroke="#38BDF8" strokeWidth="6" d="M40 40h48M40 40l24 48M88 40l-24 48" />
+        </svg>
+      );
+    case 'lightgbm':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <path fill="#0284C7" d="M12 116h104V12L12 116z" />
+          <path fill="#38BDF8" d="M36 100h60V40L36 100z" />
+          <path fill="#F59E0B" d="M60 84h30V54L60 84z" />
+        </svg>
+      );
+    case 'pandas':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#150458" width="128" height="128" rx="20" />
+          <rect fill="#E70488" x="30" y="24" width="14" height="80" rx="4" />
+          <rect fill="#E70488" x="57" y="44" width="14" height="40" rx="4" />
+          <rect fill="#FFCA00" x="84" y="24" width="14" height="80" rx="4" />
+        </svg>
+      );
+    case 'numpy':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#013243" width="128" height="128" rx="20" />
+          <path fill="#4DABF7" d="M32 28h18v40L32 44V28zm46 44h18v28H78V72zm-28-24h18v52H50V48z" />
+          <path fill="#4DABF7" d="M32 84l18 16V84H32zm46-56l18 16V28H78z" />
+        </svg>
+      );
+    case 'matplotlib':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#111827" width="128" height="128" rx="20" />
+          <path fill="none" stroke="#38BDF8" strokeWidth="8" d="M20 90C40 90 40 30 64 30s24 60 44 60" />
+          <circle fill="#F59E0B" cx="64" cy="30" r="8" />
+          <circle fill="#EF4444" cx="20" cy="90" r="8" />
+          <circle fill="#10B981" cx="108" cy="90" r="8" />
         </svg>
       );
     case 'postgresql':
@@ -134,6 +187,34 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
           <path stroke="#FFFFFF" strokeWidth="6" d="M44 44L84 44M44 44L64 84M84 44L64 84" />
         </svg>
       );
+    case 'sqlite':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <path fill="#0F80CC" d="M120 40c0-11-25.1-20-56-20S8 29 8 40v48c0 11 25.1 20 56 20s56-9 56-20V40z" />
+          <path fill="#FFFFFF" d="M64 30c24.8 0 44 4.5 44 10s-19.2 10-44 10-44-4.5-44-10 19.2-10 44-10zm0 25c24.8 0 44 4.5 44 10s-19.2 10-44 10-44-4.5-44-10 19.2-10 44-10zm0 25c24.8 0 44 4.5 44 10s-19.2 10-44 10-44-4.5-44-10 19.2-10 44-10z" />
+        </svg>
+      );
+    case 'cypher':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#0284C7" width="128" height="128" rx="24" />
+          <path fill="#FFFFFF" d="M64 24a40 40 0 100 80 40 40 0 000-80zm0 64a24 24 0 110-48 24 24 0 010 48z" />
+        </svg>
+      );
+    case 'sqlalchemy':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#D97706" width="128" height="128" rx="24" />
+          <path fill="#FFFFFF" d="M44 32h40v12L68 64l16 20v12H44V84l16-20-16-20V32z" />
+        </svg>
+      );
+    case 'pytest':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#0A0F1D" width="128" height="128" rx="24" />
+          <path fill="none" stroke="#00F0FF" strokeWidth="16" strokeLinecap="round" strokeLinejoin="round" d="M24 64l24 24L104 32" />
+        </svg>
+      );
     case 'git':
       return (
         <svg className={className} viewBox="0 0 128 128">
@@ -144,7 +225,7 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
     case 'github':
       return (
         <svg className={className} viewBox="0 0 128 128">
-          <path fill="#181717" d="M64 0C28.7 0 0 28.7 0 64c0 28.3 18.3 52.3 43.8 60.8 3.2.6 4.4-1.4 4.4-3.1 0-1.5-.1-6.6-.1-12-17.8 3.9-21.6-7.6-21.6-7.6-2.9-7.4-7.1-9.4-7.1-9.4-5.8-4 .4-3.9.4-3.9 6.4.5 9.8 6.6 9.8 6.6 5.7 9.8 15 7 18.6 5.3 0-4.1 1.7-7 3.5-8.6-14.2-1.6-29.2-7.1-29.2-31.7 0-7 2.5-12.7 6.6-17.2-.7-1.6-2.9-8.2.6-17 0 0 5.4-1.7 17.7 6.6 5.1-1.4 10.6-2.1 16-2.1s10.9.7 16 2.1c12.3-8.3 17.7-6.6 17.7-6.6 3.5 8.8 1.3 15.4.6 17 4.1 4.5 6.6 10.2 6.6 17.2 0 24.7-15 30-29.3 31.6 1.8 1.5 3.3 4.5 3.3 9.1 0 6.6-.1 11.9-.1 13.5 0 1.7 1.2 3.7 4.4 3.1C109.7 116.3 128 92.3 128 64 128 28.7 99.3 0 64 0z" />
+          <path fill="#FFFFFF" d="M64 0C28.7 0 0 28.7 0 64c0 28.3 18.3 52.3 43.8 60.8 3.2.6 4.4-1.4 4.4-3.1 0-1.5-.1-6.6-.1-12-17.8 3.9-21.6-7.6-21.6-7.6-2.9-7.4-7.1-9.4-7.1-9.4-5.8-4 .4-3.9.4-3.9 6.4.5 9.8 6.6 9.8 6.6 5.7 9.8 15 7 18.6 5.3 0-4.1 1.7-7 3.5-8.6-14.2-1.6-29.2-7.1-29.2-31.7 0-7 2.5-12.7 6.6-17.2-.7-1.6-2.9-8.2.6-17 0 0 5.4-1.7 17.7 6.6 5.1-1.4 10.6-2.1 16-2.1s10.9.7 16 2.1c12.3-8.3 17.7-6.6 17.7-6.6 3.5 8.8 1.3 15.4.6 17 4.1 4.5 6.6 10.2 6.6 17.2 0 24.7-15 30-29.3 31.6 1.8 1.5 3.3 4.5 3.3 9.1 0 6.6-.1 11.9-.1 13.5 0 1.7 1.2 3.7 4.4 3.1C109.7 116.3 128 92.3 128 64 128 28.7 99.3 0 64 0z" />
         </svg>
       );
     case 'docker':
@@ -160,10 +241,32 @@ export const TechLogo: React.FC<TechLogoProps> = ({ name, className = "w-4 h-4" 
           <path fill="#007ACC" d="M96.7 13.5L62.5 45.4 35.1 23.8l-18.6 9v62.4l18.6 9 27.4-21.6 34.2 31.9 19.8-9.6V23.1l-19.8-9.6zM35.1 82.2V45.8l23.5 18.2-23.5 18.2zm61.6 14.1L67.9 70l28.8-22.4v48.7z" />
         </svg>
       );
+    case 'canva':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <circle fill="#00C4CC" cx="64" cy="64" r="60" />
+          <path fill="#FFFFFF" d="M64 30c-18.8 0-34 15.2-34 34s15.2 34 34 34 34-15.2 34-34-15.2-34-34-34zm0 52c-9.9 0-18-8.1-18-18s8.1-18 18-18 18 8.1 18 18-8.1 18-18 18z" />
+        </svg>
+      );
+    case 'microsoftexcel':
+    case 'excel':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#107C41" width="128" height="128" rx="20" />
+          <path fill="#FFFFFF" d="M42 38h22l14 26 14-26h22L86 64l28 26H92L78 64 64 90H42l28-26L42 38z" />
+        </svg>
+      );
+    case 'powerpoint':
+      return (
+        <svg className={className} viewBox="0 0 128 128">
+          <rect fill="#C43E1C" width="128" height="128" rx="20" />
+          <path fill="#FFFFFF" d="M44 36h28c11 0 18 6 18 16s-7 16-18 16H58v24H44V36zm14 12v12h14c3.5 0 6-1.5 6-6s-2.5-6-6-6H58z" />
+        </svg>
+      );
     default:
       return (
         <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" className="stroke-blue-600" />
+          <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" className="stroke-cyan-400" />
         </svg>
       );
   }
