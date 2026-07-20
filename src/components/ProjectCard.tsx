@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ExternalLink, ArrowRight, Star, Layers } from 'lucide-react';
 import type { Project } from '../data/projects';
 import { GithubIcon } from './SocialIcons';
+import { TechLogo } from './TechLogos';
 
 interface ProjectCardProps {
   project: Project;
@@ -85,14 +86,15 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, featured = fa
             </ul>
           </div>
 
-          {/* Tech Stack Chips */}
+          {/* Tech Stack Chips with Logos */}
           <div className="flex flex-wrap gap-1.5 mb-2">
             {project.techStack.map((tech) => (
               <span
                 key={tech}
-                className="px-2.5 py-1 rounded bg-gray-100 text-gray-700 text-xs font-medium group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors"
+                className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-gray-100 text-gray-700 text-xs font-medium group-hover:bg-blue-50 group-hover:text-blue-700 transition-colors"
               >
-                {tech}
+                <TechLogo name={tech} className="w-3.5 h-3.5 flex-shrink-0" />
+                <span>{tech}</span>
               </span>
             ))}
           </div>

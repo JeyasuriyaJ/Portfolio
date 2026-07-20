@@ -5,6 +5,7 @@ import { SEO } from '../components/SEO';
 import { ArchitectureDiagram } from '../components/ArchitectureDiagram';
 import { ArrowLeft, ExternalLink, AlertCircle, CheckCircle, Lightbulb, Cpu, Layers, Image as ImageIcon } from 'lucide-react';
 import { GithubIcon } from '../components/SocialIcons';
+import { TechLogo } from '../components/TechLogos';
 
 export const ProjectDetailPage: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -156,9 +157,10 @@ export const ProjectDetailPage: React.FC = () => {
                 {project.techStack.map((tech) => (
                   <span
                     key={tech}
-                    className="px-3 py-1.5 rounded-md bg-gray-100 border border-gray-200 text-xs font-semibold text-gray-800"
+                    className="inline-flex items-center gap-2 px-3.5 py-2 rounded-md bg-gray-100 border border-gray-200 text-xs font-semibold text-gray-800"
                   >
-                    {tech}
+                    <TechLogo name={tech} className="w-4 h-4 flex-shrink-0" />
+                    <span>{tech}</span>
                   </span>
                 ))}
               </div>

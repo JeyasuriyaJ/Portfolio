@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { skillGroups } from '../data/skills';
+import { TechLogo } from './TechLogos';
 import { Search, Filter } from 'lucide-react';
 
 export const Skills: React.FC = () => {
@@ -35,13 +36,13 @@ export const Skills: React.FC = () => {
             Technical Skills
           </h2>
 
-          {/* Search & Filter Inputs */}
+          {/* Search Input */}
           <div className="flex flex-wrap items-center gap-3">
             <div className="relative flex-1 sm:w-64">
               <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search skill (e.g. Python, React)..."
+                placeholder="Search skill (e.g. Python, React, Docker)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-gray-300 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-gray-50"
@@ -53,13 +54,13 @@ export const Skills: React.FC = () => {
         {/* Category Pills Filter */}
         <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 text-xs font-medium scrollbar-none">
           <span className="text-gray-400 flex items-center gap-1 mr-2">
-            <Filter className="w-3.5 h-3.5" /> Filter:
+            <Filter className="w-3.5 h-3.5" /> Category:
           </span>
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3 py-1.5 rounded-full whitespace-nowrap transition-all ${
+              className={`px-3.5 py-1.5 rounded-full whitespace-nowrap transition-all ${
                 selectedCategory === cat
                   ? 'bg-blue-600 text-white font-bold shadow-2xs'
                   : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
@@ -81,13 +82,14 @@ export const Skills: React.FC = () => {
                 <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4 pb-2 border-b border-gray-200 group-hover:text-blue-600 transition-colors">
                   {group.category}
                 </h3>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2.5">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="inline-flex items-center px-3 py-1.5 rounded-md bg-white border border-gray-200 text-xs font-semibold text-gray-800 shadow-2xs hover:border-blue-400 hover:text-blue-600 hover:scale-102 transition-all cursor-default"
+                      className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-gray-200 text-xs font-semibold text-gray-800 shadow-2xs hover:border-blue-400 hover:text-blue-600 hover:scale-102 transition-all cursor-default"
                     >
-                      {skill}
+                      <TechLogo name={skill} className="w-4 h-4 flex-shrink-0" />
+                      <span>{skill}</span>
                     </span>
                   ))}
                 </div>
