@@ -26,44 +26,44 @@ export const Skills: React.FC = () => {
     .filter(Boolean);
 
   return (
-    <section id="skills" className="py-16 bg-white border-b border-gray-200">
+    <section id="skills" className="py-16 bg-slate-950 border-b border-slate-800/80">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title & Filter Controls */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
-          <h2 className="text-2xl font-bold text-gray-900 tracking-tight flex items-center gap-2">
-            <span className="w-2 h-6 bg-blue-600 rounded-sm"></span>
+          <h2 className="text-2xl font-bold text-slate-100 tracking-tight flex items-center gap-2.5">
+            <span className="w-2 h-6 bg-gradient-to-b from-blue-500 to-cyan-400 rounded-sm"></span>
             Technical Skills
           </h2>
 
           {/* Search Input */}
           <div className="flex flex-wrap items-center gap-3">
             <div className="relative flex-1 sm:w-64">
-              <Search className="w-4 h-4 text-gray-400 absolute left-3 top-1/2 -translate-y-1/2" />
+              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
               <input
                 type="text"
-                placeholder="Search skill (e.g. Python, React, Docker)..."
+                placeholder="Search skill (e.g. Python, React)..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-9 pr-4 py-2 text-xs rounded-lg border border-gray-300 focus:outline-none focus:border-blue-600 focus:ring-1 focus:ring-blue-600 bg-gray-50"
+                className="w-full pl-9 pr-4 py-2 text-xs rounded-xl border border-slate-800 focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 bg-slate-900 text-slate-100 placeholder-slate-500 shadow-sm"
               />
             </div>
           </div>
         </div>
 
         {/* Category Pills Filter */}
-        <div className="flex items-center gap-1.5 overflow-x-auto pb-4 mb-8 text-xs font-medium scrollbar-none">
-          <span className="text-gray-400 flex items-center gap-1 mr-2">
-            <Filter className="w-3.5 h-3.5" /> Category:
+        <div className="flex items-center gap-2 overflow-x-auto pb-4 mb-8 text-xs font-semibold scrollbar-none">
+          <span className="text-slate-400 flex items-center gap-1.5 mr-2">
+            <Filter className="w-3.5 h-3.5 text-cyan-400" /> Category:
           </span>
           {categories.map((cat) => (
             <button
               key={cat}
               onClick={() => setSelectedCategory(cat)}
-              className={`px-3.5 py-1.5 rounded-full whitespace-nowrap transition-all ${
+              className={`px-3.5 py-1.5 rounded-xl whitespace-nowrap transition-all ${
                 selectedCategory === cat
-                  ? 'bg-blue-600 text-white font-bold shadow-2xs'
-                  : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  ? 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold shadow-lg shadow-blue-500/20'
+                  : 'bg-slate-900 text-slate-400 hover:text-slate-200 hover:bg-slate-800 border border-slate-800'
               }`}
             >
               {cat}
@@ -77,16 +77,16 @@ export const Skills: React.FC = () => {
             filteredGroups.map((group) => group && (
               <div
                 key={group.category}
-                className="bg-gray-50 p-6 rounded-xl border border-gray-200 hover:border-blue-300 transition-all group"
+                className="bg-slate-900/90 p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-all shadow-xl group"
               >
-                <h3 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-4 pb-2 border-b border-gray-200 group-hover:text-blue-600 transition-colors">
-                  {group.category}
+                <h3 className="text-xs font-bold text-slate-200 uppercase tracking-wider mb-4 pb-2 border-b border-slate-800 group-hover:text-cyan-400 transition-colors">
+                  {group.category} ({group.skills.length})
                 </h3>
                 <div className="flex flex-wrap gap-2.5">
                   {group.skills.map((skill) => (
                     <span
                       key={skill}
-                      className="inline-flex items-center gap-2 px-3 py-2 rounded-lg bg-white border border-gray-200 text-xs font-semibold text-gray-800 shadow-2xs hover:border-blue-400 hover:text-blue-600 hover:scale-102 transition-all cursor-default"
+                      className="inline-flex items-center gap-2 px-3 py-2 rounded-xl bg-slate-950 border border-slate-800 text-xs font-semibold text-slate-200 hover:border-cyan-500/50 hover:text-cyan-300 hover:scale-102 transition-all shadow-xs cursor-default"
                     >
                       <TechLogo name={skill} className="w-4 h-4 flex-shrink-0" />
                       <span>{skill}</span>
@@ -96,7 +96,7 @@ export const Skills: React.FC = () => {
               </div>
             ))
           ) : (
-            <div className="col-span-full py-8 text-center text-sm text-gray-500">
+            <div className="col-span-full py-8 text-center text-sm text-slate-400">
               No skills found matching "{searchQuery}".
             </div>
           )}

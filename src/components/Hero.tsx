@@ -13,49 +13,56 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="bg-white border-b border-gray-200 py-14 sm:py-20 relative overflow-hidden bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:24px_24px]">
+    <section className="bg-slate-950 border-b border-slate-800/80 py-14 sm:py-24 relative overflow-hidden bg-[radial-gradient(#1e293b_1px,transparent_1px)] [background-size:24px_24px]">
+      
+      {/* Background Ambient Glow Orbs */}
+      <div className="absolute top-1/4 left-10 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute bottom-10 right-10 w-96 h-96 bg-cyan-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-12">
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10 md:gap-14">
           
           {/* Left Column: Text Content */}
           <div className="flex-1 max-w-2xl">
             
             {/* Status Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-800 text-xs font-semibold uppercase tracking-wider mb-6 shadow-2xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping"></span>
-              <span className="w-2 h-2 rounded-full bg-emerald-500 -ml-4"></span>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-950/80 border border-blue-800/60 text-cyan-300 text-xs font-semibold uppercase tracking-wider mb-6 shadow-md">
+              <span className="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+              <span className="w-2 h-2 rounded-full bg-cyan-400 -ml-4"></span>
               <span>Software Engineering & AI/ML Candidate</span>
             </div>
 
             {/* Name */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 tracking-tight mb-3">
-              Jeyasuriya J
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-100 tracking-tight mb-3">
+              <span className="bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400 bg-clip-text text-transparent">
+                Jeyasuriya J
+              </span>
             </h1>
 
             {/* Professional Title */}
-            <h2 className="text-lg sm:text-xl font-bold text-blue-600 mb-5 flex items-center gap-2">
-              <Cpu className="w-5 h-5 text-blue-600 flex-shrink-0" />
+            <h2 className="text-lg sm:text-xl font-bold text-cyan-400 mb-5 flex items-center gap-2.5">
+              <Cpu className="w-5 h-5 text-cyan-400 flex-shrink-0" />
               <span>B.E. Electronics & Communication Engineering | Full Stack & AI Developer</span>
             </h2>
 
             {/* Short Intro */}
-            <p className="text-base sm:text-lg text-gray-600 leading-relaxed mb-8">
-              Undergraduate specializing in building scalable AI-powered systems, graph-based decision support platforms, and full-stack web applications using <strong className="text-gray-900 font-semibold">Python, FastAPI, Django, and React</strong>.
+            <p className="text-base sm:text-lg text-slate-300 leading-relaxed mb-8">
+              Undergraduate specializing in building scalable AI-powered systems, graph-based decision support platforms, and full-stack web applications using <strong className="text-slate-100 font-semibold underline decoration-cyan-500/40 underline-offset-4">Python, FastAPI, Django, and React</strong>.
             </p>
 
             {/* Key Proof Metrics Row */}
-            <div className="grid grid-cols-3 gap-3 mb-8 p-3.5 rounded-xl bg-gray-50/90 border border-gray-200/80 backdrop-blur-2xs">
-              <div className="text-center sm:text-left border-r border-gray-200 pr-2">
-                <div className="text-lg sm:text-xl font-extrabold text-gray-900 font-mono">8.14</div>
-                <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider">CGPA (4th Sem)</div>
+            <div className="grid grid-cols-3 gap-3 mb-8 p-4 rounded-2xl bg-slate-900/90 border border-slate-800 shadow-xl shadow-blue-950/30 backdrop-blur-sm">
+              <div className="text-center sm:text-left border-r border-slate-800 pr-2">
+                <div className="text-xl sm:text-2xl font-black text-cyan-400 font-mono">8.14</div>
+                <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">CGPA (4th Sem)</div>
               </div>
-              <div className="text-center sm:text-left border-r border-gray-200 pr-2">
-                <div className="text-lg sm:text-xl font-extrabold text-gray-900 font-mono">260+</div>
-                <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider">LeetCode Solved</div>
+              <div className="text-center sm:text-left border-r border-slate-800 pr-2">
+                <div className="text-xl sm:text-2xl font-black text-blue-400 font-mono">260+</div>
+                <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">LeetCode Solved</div>
               </div>
               <div className="text-center sm:text-left">
-                <div className="text-lg sm:text-xl font-extrabold text-gray-900 font-mono">3</div>
-                <div className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider">Core Projects</div>
+                <div className="text-xl sm:text-2xl font-black text-indigo-400 font-mono">3</div>
+                <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider">Core Projects</div>
               </div>
             </div>
 
@@ -66,7 +73,7 @@ export const Hero: React.FC = () => {
               <a
                 href="/assets/resume.pdf"
                 download
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 active:scale-98 text-white font-bold text-sm transition-all shadow-xs"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-600 hover:brightness-110 active:scale-98 text-white font-bold text-sm transition-all shadow-lg shadow-blue-500/25"
               >
                 <Download className="w-4 h-4" />
                 <span>Download Resume</span>
@@ -75,26 +82,26 @@ export const Hero: React.FC = () => {
               {/* Contact Button */}
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-gray-300 hover:border-gray-400 bg-white text-gray-700 hover:text-gray-900 font-bold text-sm transition-all shadow-2xs"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 hover:border-slate-500 bg-slate-900 text-slate-200 hover:text-white font-bold text-sm transition-all shadow-md"
               >
                 <span>Contact Me</span>
-                <ArrowDownRight className="w-4 h-4 text-gray-400" />
+                <ArrowDownRight className="w-4 h-4 text-slate-400" />
               </a>
 
               {/* Copy Email Button */}
               <button
                 onClick={copyEmail}
-                className="inline-flex items-center gap-1.5 px-4 py-3 rounded-xl border border-gray-200 hover:border-blue-400 bg-white text-gray-700 text-xs font-bold transition-all relative shadow-2xs"
+                className="inline-flex items-center gap-1.5 px-4 py-3 rounded-xl border border-slate-800 hover:border-cyan-500/50 bg-slate-900 text-slate-300 text-xs font-bold transition-all relative shadow-sm"
                 title="Copy email address"
               >
                 {copied ? (
                   <>
-                    <Check className="w-4 h-4 text-emerald-600" />
-                    <span className="text-emerald-700">Copied!</span>
+                    <Check className="w-4 h-4 text-emerald-400" />
+                    <span className="text-emerald-400">Copied!</span>
                   </>
                 ) : (
                   <>
-                    <Copy className="w-4 h-4 text-gray-500" />
+                    <Copy className="w-4 h-4 text-slate-400" />
                     <span>Copy Email</span>
                   </>
                 )}
@@ -106,7 +113,7 @@ export const Hero: React.FC = () => {
                   href="https://github.com/JeyasuriyaJ"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl border border-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-100 hover:border-gray-300 transition-all shadow-2xs"
+                  className="p-3 rounded-xl border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-900 hover:border-slate-700 transition-all shadow-sm"
                   aria-label="GitHub Profile"
                 >
                   <GithubIcon className="w-5 h-5" />
@@ -115,14 +122,14 @@ export const Hero: React.FC = () => {
                   href="https://www.linkedin.com/in/jeyasuriya-j-593937366/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-3 rounded-xl border border-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-100 hover:border-gray-300 transition-all shadow-2xs"
+                  className="p-3 rounded-xl border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-900 hover:border-slate-700 transition-all shadow-sm"
                   aria-label="LinkedIn Profile"
                 >
                   <LinkedinIcon className="w-5 h-5" />
                 </a>
                 <a
                   href={`mailto:${email}`}
-                  className="p-3 rounded-xl border border-gray-200 text-gray-600 hover:text-gray-900 hover:bg-gray-100 hover:border-gray-300 transition-all shadow-2xs"
+                  className="p-3 rounded-xl border border-slate-800 text-slate-400 hover:text-white hover:bg-slate-900 hover:border-slate-700 transition-all shadow-sm"
                   aria-label="Send Email"
                 >
                   <Mail className="w-5 h-5" />
@@ -135,7 +142,7 @@ export const Hero: React.FC = () => {
 
           {/* Right Column: Profile Photo Container */}
           <div className="flex-shrink-0 relative group">
-            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-4 border-white shadow-xl ring-1 ring-gray-200/80 bg-gray-100 transition-transform duration-300 group-hover:scale-102">
+            <div className="w-48 h-48 sm:w-64 sm:h-64 rounded-2xl overflow-hidden border-2 border-slate-700 ring-4 ring-cyan-500/20 shadow-2xl shadow-cyan-500/10 bg-slate-900 transition-transform duration-300 group-hover:scale-102">
               <img
                 src="/assets/Profile.jpeg"
                 alt="Jeyasuriya J — Full Stack & AI Developer"
@@ -144,13 +151,13 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Quick Stats Overlay Badges */}
-            <div className="absolute -bottom-3 -right-3 bg-white px-3.5 py-1.5 rounded-xl border border-gray-200 shadow-md text-xs font-mono font-bold text-gray-800 flex items-center gap-1.5">
-              <ShieldCheck className="w-4 h-4 text-emerald-600" />
+            <div className="absolute -bottom-3 -right-3 bg-slate-900 px-3.5 py-1.5 rounded-xl border border-slate-700 shadow-xl text-xs font-mono font-bold text-slate-200 flex items-center gap-1.5">
+              <ShieldCheck className="w-4 h-4 text-emerald-400" />
               <span>Full Stack & AI</span>
             </div>
 
-            <div className="absolute -top-3 -left-3 bg-white px-3 py-1 rounded-lg border border-gray-200 shadow-sm text-[11px] font-mono font-semibold text-gray-600 flex items-center gap-1">
-              <Terminal className="w-3.5 h-3.5 text-blue-600" />
+            <div className="absolute -top-3 -left-3 bg-slate-900 px-3 py-1 rounded-lg border border-slate-700 shadow-lg text-[11px] font-mono font-semibold text-cyan-400 flex items-center gap-1">
+              <Terminal className="w-3.5 h-3.5 text-cyan-400" />
               <span>Python / FastAPI</span>
             </div>
           </div>
